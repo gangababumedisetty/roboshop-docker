@@ -12,7 +12,7 @@ services:
     image: joindevops/mongodb:1.0.0
     container_name: mongodb
   
-  network:
+  networks:
     default:
       driver: bridge
       name: roboshop
