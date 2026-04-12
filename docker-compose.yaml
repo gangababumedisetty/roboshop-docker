@@ -37,6 +37,11 @@ services:
   redis:
     image: redis:7.0
     container_name: redis
+  mysql:
+    build: ./mysql
+    image: joindevops/mysql:1.0.0
+    container_name: mysql
+
 
 networks:
   default:
