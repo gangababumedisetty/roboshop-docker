@@ -11,6 +11,15 @@ services:
    container_name: user
    depends_on:
    - redis
+   - mongodb
+  cart:
+   build: ./cart
+   image: joindevops/cart:1.0.0
+   container_name: cart
+   depends_on:
+   - redis
+   - catalogue
+
   frontend:
    build: ./frontend
    image: joindevops/frontend:1.0.0
@@ -20,6 +29,7 @@ services:
    depends_on:
     - catalogue
     - user
+    - cart
   mongodb:
     build: ./mongodb
     image: joindevops/mongodb:1.0.0
