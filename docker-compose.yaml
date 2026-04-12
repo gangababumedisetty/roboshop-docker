@@ -35,6 +35,7 @@ services:
     - catalogue
     - user
     - cart
+    - shipping
   mongodb:
     build: ./mongodb
     image: joindevops/mongodb:1.0.0
