@@ -7,11 +7,10 @@ services:
     - mongodb
   user:
    build: ./user
-  image: joindevops/user:1.0.0
-  container_name: user
-  depends_on:
-  - redis
-  - mongodb
+   image: joindevops/user:1.0.0
+   container_name: user
+   depends_on:
+   - redis
   frontend:
    build: ./frontend
    image: joindevops/frontend:1.0.0
